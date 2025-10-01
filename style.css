@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Chela One", system-ui;
+}
+body {
+  text-align: center;
+  background-color: #0d1120;
+  color: #bacae6;
+  overflow-x: hidden;
+}
+h1 {
+  padding: 2rem;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-body {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #0e2957;
+  border-radius: 20%;
+  border: 0.01rem solid gray;
+  box-shadow: 0rem 0rem 3rem rgb(0, 0, 0);
+  position: relative;
+}
+.clock {
+  width: 280px;
+  height: 280px;
+  background-color: #4064a3;
+  box-shadow: 0rem 0rem 4rem #4064a3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock span {
+  position: absolute;
+  transform: rotate(calc(30deg * var(--i)));
+  inset: 0.2rem;
+  text-align: center;
+}
+.clock span b {
+  transform: rotate(calc(-30deg * var(--i)));
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+}
+.dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #bacae6;
+  border-radius: 50%;
+  border: 0.1rem solid gray;
+  z-index: 1;
+}
+.hand {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.hand i {
+  position: absolute;
+  width: 0.3rem;
+  border-radius: 1rem;
+}
+#hour i {
+  background-color: red;
+  height: 6rem;
+}
+#min i {
+  background-color: blue;
+  height: 8rem;
+}
+#sec i {
+  background-color: #bacae6;
+  height: 9.8rem;
+}
+#time{
+  padding: 2rem 0;
+  font-size: 3rem;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1024px) {
+  h1{
+    font-size: 3.2rem;
+  }
+  .clock-body{
+    height: 400px;
+    width: 400px;
+  }
+  .clock{
+    height: 265px;
+    width: 265px;
+  }
+  .clock span b{
+    font-size: 2.8rem;
+  }
+  #hour i{
+    height: 5.5rem;
+  }
+  #min i{
+    height: 7.5rem;
+  }
+  #sec i{
+    height: 9rem;
+  }
+  #time{
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1{
+    font-size: 3rem;
+  }
+  .clock-body{
+    height: 350px;
+    width: 350px;
+  }
+  .clock{
+    height: 240px;
+    width: 240px;
+  }
+  .clock span b{
+    font-size: 2.5rem;
+  }
+  .hand i{
+    width: 0.2rem;
+  }
+  #hour i{
+    height: 5.2rem;
+  }
+  #min i{
+    height: 7rem;
+  }
+  #sec i{
+    height: 8rem;
+  }
+  #time{
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  h1{
+    font-size: 2.8rem;
+  }
+  .clock-body{
+    height: 300px;
+    width: 300px;
+  }
+  .clock{
+    height: 200px;
+    width: 200px;
+  }
+  .clock span b{
+    font-size: 1.8rem;
+  }
+  .dot{
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  #hour i{
+    height: 5rem;
+  }
+  #min i{
+    height: 6rem;
+  }
+  #sec i{
+    height: 7.2rem;
+  }
+  #time{
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 489px){
+  h1{
+    font-size: 2rem;
+  }
+  .clock-body{
+    height: 230px;
+    width: 230px;
+  }
+  .clock{
+    height: 150px;
+    width: 150px;
+  }
+  .clock span b{
+    font-size: 1.5rem;
+  }
+  #hour i{
+    height: 3.5rem;
+  }
+  #min i{
+    height: 4.4rem;
+  }
+  #sec i{
+    height: 5.4rem;
+  }
+  #time{
+    font-size: 1.5rem;
+  }
+}
