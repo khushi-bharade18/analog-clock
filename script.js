@@ -2,8 +2,10 @@ const hour = document.querySelector("#hour");
 const min = document.querySelector("#min");
 const sec = document.querySelector("#sec");
 const time = document.querySelector("#time");
+const sound = new Audio("sound.mp3");
 
 function dispalyTime() {
+  sound.play();
   let date = new Date();
 
   let hh = date.getHours();
